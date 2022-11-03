@@ -18,22 +18,22 @@ public class DetaVenta implements Serializable {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="idproducto")
+    @JoinColumn(name="idproducto", nullable = false)
     private Producto producto;
 
     @ManyToOne
-    @JoinColumn(name="idventa")
+    @JoinColumn(name="idventa", nullable = false)
     private Venta venta;
 
-    @Column
+    @Column(nullable = false)
     private int cantidad;
 
-    @Column
+    @Column(nullable = false)
     private int subtotal;
 
-    @Column
+    @Column(nullable = false)
     private int descuento;
 
-    @Column(name="preciounidad")
+    @Column(name="preciounidad", nullable = false)
     private int unidad;
 }

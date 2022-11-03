@@ -18,25 +18,25 @@ public class Detalle implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="cantidadProducto")
+    @Column(name="cantidadProducto", nullable = false)
     private int cantidad;
 
     @ManyToOne
-    @JoinColumn(name="idOrdenCompra")
+    @JoinColumn(name="idOrdenCompra", nullable = false)
     private Orden orden;
 
-    @Column(name="precioUnidad")
+    @Column(name="precioUnidad", nullable = false)
     private int unidad;
 
-    @Column(name="precioTotal")
+    @Column(name="precioTotal", nullable = false)
     private int total;
 
-    @Column
+    @Column(nullable = false)
     private String observaciones;
 
-    @Column
+    @Column(nullable = false)
     private int descuento;
 
-    @Column(name="nombreProducto")
+    @Column(name="nombreProducto", nullable = false)
     private String nombre;
 }

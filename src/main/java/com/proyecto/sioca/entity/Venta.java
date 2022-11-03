@@ -16,12 +16,12 @@ public class Venta implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="valortotal")
+    @Column(name="valortotal" , nullable = false)
     private Long total;
 
-    @Column
+    @Column(nullable = false)
     private String estado;
 
-    @Column(name="fechaventa")
+    @Column(name="fechaventa", nullable = false)
     private String fecha;
 }

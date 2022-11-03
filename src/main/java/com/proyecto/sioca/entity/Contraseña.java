@@ -19,9 +19,9 @@ public class Contraseña implements Serializable {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="id_usuario")
+    @JoinColumn(name="id_usuario", nullable = false)
     private User usuario;
 
-    @Column
+    @Column(nullable = false)
     private String codigo;
 }

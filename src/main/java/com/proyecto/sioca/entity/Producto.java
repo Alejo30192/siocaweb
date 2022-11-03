@@ -18,32 +18,32 @@ public class Producto implements Serializable {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="tipo")
+    @JoinColumn(name="tipo", nullable = false)
     private Categoria categoria;
 
-    @Column
+    @Column(nullable = false)
     private String talla;
 
-    @Column(name="nombreProducto")
+    @Column(name="nombreProducto", nullable = false)
     private String nombre;
 
-    @Column
+    @Column(nullable = false)
     private String referencia;
 
-    @Column
-    private int String;
+    @Column(nullable = false)
+    private int cantidad;
 
-    @Column(name="precioUnidad")
+    @Column(name="precioUnidad", nullable = false)
     private String unidad;
 
     @ManyToOne
-    @JoinColumn(name="idProveedor")
+    @JoinColumn(name="idProveedor", nullable = false)
     private Proveedor proveedor;
 
-    @Column
+    @Column(nullable = false)
     private String fecha;
 
-    @Column(name="precioTotal")
+    @Column(name="precioTotal", nullable = false)
     private String total;
 
 }

@@ -17,32 +17,32 @@ public class Proveedor implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String nombre;
 
-    @Column
+    @Column(nullable = false)
     private String empresa;
 
-    @Column(name="Direccion1")
+    @Column(name="Direccion1",nullable = false)
     private String direccion;
 
-    @Column(name="Direccion2")
+    @Column(name="Direccion2",nullable = false)
     private String direccion2;
 
-    @Column(name="Correo1")
+    @Column(name="Correo1",nullable = false)
     private String correo;
 
-    @Column(name="Correo2")
+    @Column(name="Correo2", nullable = false)
     private String correo2;
 
-    @Column
+    @Column(nullable = false)
     private int nit;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(nullable = false)
     private Categoria categoria;
 
-    @Column
+    @Column(nullable = false)
     private String ciudad;
 
 

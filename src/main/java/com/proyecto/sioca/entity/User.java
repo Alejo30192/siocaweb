@@ -19,38 +19,38 @@ public class User implements Serializable {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="tipodocumento_idtipodocumento")
+    @JoinColumn(name="tipodocumento_idtipodocumento", nullable = false)
     private TipoDocumento tipo;
 
-    @Column
+    @Column(nullable = false)
     private String numero;
 
-    @Column
+    @Column(nullable = false)
     private String nombre;
 
-    @Column
+    @Column(nullable = false)
     private String apellido;
 
-    @Column
+    @Column(nullable = false)
     private String correo;
 
-    @Column
+    @Column(nullable = false)
     private String telefono;
 
-    @Column
+    @Column(nullable = false)
     private String direccion;
 
-    @Column
+    @Column(nullable = false)
     private String fecha;
 
     @ManyToOne
-    @JoinColumn(name="Id_Rol")
+    @JoinColumn(name="Id_Rol", nullable = false)
     private Rol rol;
 
-    @Column
+    @Column(nullable = false)
     private String contraseña;
 
-    @Column
+    @Column(nullable = false)
     private String confirmar;
 
 

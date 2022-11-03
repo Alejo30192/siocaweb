@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 public class Orden implements Serializable {
 
-    @Column
+    @Column(nullable = false)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,13 +22,13 @@ public class Orden implements Serializable {
     private String fecha;
 
     @ManyToOne
-    @JoinColumn(name="id_proveedor")
+    @JoinColumn(name="id_proveedor", nullable = false)
     private Proveedor proveedor;
 
-    @Column
+    @Column(nullable = false)
     private String estado;
 
-    @Column(name="valortotal")
+    @Column(name="valortotal", nullable = false)
     private int valor;
 
 }
