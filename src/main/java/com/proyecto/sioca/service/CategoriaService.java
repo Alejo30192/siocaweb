@@ -17,7 +17,7 @@ public class CategoriaService {
     }
 
     public Categoria saveCategoria(Categoria categoria){
-        return iCategoriaRepository.save(Categoria);
+        return iCategoriaRepository.save(categoria);
     }
 
     public Categoria getCategoria(Long id){
@@ -25,7 +25,7 @@ public class CategoriaService {
     }
 
     public Categoria updateCategoria(Categoria categoria){
-        return iCategoriaRepository.save(Categoria);
+        return iCategoriaRepository.save(categoria);
     }
 
     public void deleteCategoria(Long id){

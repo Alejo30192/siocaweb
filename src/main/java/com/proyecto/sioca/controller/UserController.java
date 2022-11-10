@@ -48,4 +48,9 @@ public class UserController {
         return getUsers();
     }
 
+    @PostMapping("/users/prueba1")
+    public User prueba1(@RequestBody User user){
+        return userService.prueba(user.getId(),user.getNumero());
+    }
+
 }

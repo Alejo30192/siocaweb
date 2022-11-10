@@ -21,7 +21,7 @@ public class CategoriaController {
     }
 
     @PostMapping("/categorias/new")
-    public Producto saveCategoria(@RequestBody Categoria categoria){
+    public Categoria saveCategoria(@RequestBody Categoria categoria){
         return categoriaService.saveCategoria(categoria);
     }
 
@@ -36,13 +36,13 @@ public class CategoriaController {
     }
 
     @PutMapping("/productos/update/{id}")
-    public Producto updateProducto(@PathVariable Long id, @RequestBody Producto producto){
-        producto.setId(id);
-        return categoriaService.updateProducto(producto);
+    public Categoria updateProducto(@PathVariable Long id, @RequestBody Categoria categoria){
+        categoria.setId(id);
+        return categoriaService.updateCategoria(categoria);
     }
 
     @DeleteMapping("/productos/delete/{id}")
-    public List<Producto> deleteProducto(@PathVariable Long id){
+    public List<Categoria> deleteCategoria(@PathVariable Long id){
         categoriaService.deleteCategoria(id);
         return getCategoria();
     }

@@ -32,4 +32,8 @@ public class UserService {
     public void deleteUser(Long id){
         iUserRepository.deleteById(id);
     }
+
+    public User prueba(Long id,String numero){
+        return iUserRepository.unsolousuario(id,numero);
+    }
 }
