@@ -15,20 +15,20 @@ public class CategoriaController {
     @Autowired
     private CategoriaService categoriaService;
 
-    @GetMapping("/productos")
+    @GetMapping("/categorias")
     public List<Categoria> getCategoria(){
         return categoriaService.getCategoria();
     }
 
-    @PostMapping("/productos/new")
-    public Producto saveProducto(@RequestBody Producto producto){
-        return productoService.saveProducto(producto);
+    @PostMapping("/categorias/new")
+    public Producto saveCategoria(@RequestBody Categoria categoria){
+        return categoriaService.saveCategoria(categoria);
     }
 
-    @GetMapping("/productos/{id}")
-    public Producto getProducto(@PathVariable Long id){
+    @GetMapping("/categorias/{id}")
+    public Categoria getCategoria(@PathVariable Long id){
         try{
-            return productoService.getProducto(id);
+            return categoriaService.getCategoria(id);
         }catch (Exception ex){
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "Product Not Found", ex  );
