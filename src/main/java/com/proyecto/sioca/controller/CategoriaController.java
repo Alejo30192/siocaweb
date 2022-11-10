@@ -38,13 +38,13 @@ public class CategoriaController {
     @PutMapping("/productos/update/{id}")
     public Producto updateProducto(@PathVariable Long id, @RequestBody Producto producto){
         producto.setId(id);
-        return productoService.updateProducto(producto);
+        return categoriaService.updateProducto(producto);
     }
 
     @DeleteMapping("/productos/delete/{id}")
     public List<Producto> deleteProducto(@PathVariable Long id){
-        productoService.deleteProducto(id);
-        return getProductos();
+        categoriaService.deleteCategoria(id);
+        return getCategoria();
     }
 
     }
